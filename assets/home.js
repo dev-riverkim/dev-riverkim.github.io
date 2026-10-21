@@ -131,22 +131,16 @@ function setupWebApp() {
   const btn = $('#webapp-btn');
   btn.href = config.webPreviewUrl;
   btn.removeAttribute('aria-disabled');
-  $('#webapp-label').textContent = '앞마당 웹앱 열기';
+  $('#webapp-label').textContent = '1단계: 앞마당 웹앱 열기';
 }
 
-// 아이폰 칸은 기기·브라우저마다 다른 안내를 보인다. 프로필은 Safari에서만 설치 화면으로 넘어가므로
+// 아이폰 칸은 기기·브라우저마다 다른 안내를 보인다. '홈 화면에 추가'는 Safari에서만 되므로
 // 다른 브라우저에서는 버튼 대신 Safari로 여는 법을 보인다.
 function setupIOS(os) {
   const pane = $('[data-pane="ios"]');
   const mode = os === 'ios' ? iosBrowser() : 'device';
   pane.dataset.ios = mode;
   if (mode === 'other') $('#ios-open-line').textContent = '주소를 복사해 Safari에 붙여 넣어요.';
-  if (config.iosProfileUrl) {
-    const btn = $('#profile-btn');
-    btn.href = config.iosProfileUrl;
-    btn.removeAttribute('aria-disabled');
-    $('#profile-label').textContent = '앱 아이콘 설치하기';
-  }
 }
 
 function copyOnClick(btn, text) {

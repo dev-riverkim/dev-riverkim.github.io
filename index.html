@@ -46,107 +46,64 @@
               <p class="get-meta get-size num" id="apk-size" hidden></p>
             </div>
 
-            <!-- 아이폰: 쿼리 없이 들어와도 같은 안내. 자동 다운로드 없이 버튼 한 번. 보여 줄 칸은 home.js가 data-ios로 고른다 -->
+            <!-- 아이폰: 쿼리 없이 들어와도 같은 안내. 자동 이동 없이 버튼 한 번. 보여 줄 칸은 home.js가 data-ios로 고른다 -->
             <div class="get-pane" data-pane="ios" data-ios="safari" hidden>
               <div class="get-ios">
                 <span class="get-badge" aria-hidden="true">
                   <img src="/assets/logo.svg" alt="" width="52" height="52">
                 </span>
                 <div>
-                  <p class="get-title">아이폰은 앱 아이콘 설치</p>
-                  <p class="get-line">홈 화면에 앞마당 아이콘이 생겨요</p>
+                  <p class="get-title">아이폰은 홈 화면에 추가</p>
+                  <p class="get-line">진짜 앱 설치(TestFlight)는 준비 중이에요</p>
                 </div>
               </div>
 
-              <!-- Safari -->
+              <!-- Safari: 홈 화면에 추가할 대상은 웹앱 주소라서 웹앱을 먼저 연다 -->
               <div class="ios-mode" data-for="safari">
                 <ol class="ios-steps">
                   <li>
-                    <div class="ios-mini ios-allow" role="img" aria-label="구성 프로파일을 다운로드하려 한다는 창에서 허용을 누르는 그림">
+                    <div class="ios-mini ios-web" role="img" aria-label="이 페이지에서 앞마당 웹앱 열기 버튼을 누르는 그림">
                       <span class="ios-no" aria-hidden="true">1</span>
-                      <span class="ios-dlg">
-                        <i></i><i class="short"></i>
-                        <span class="ios-dlg-btns"><span>무시</span><b>허용</b></span>
-                      </span>
+                      <span class="ios-row dim"></span>
+                      <span class="ios-row on ios-row-btn">웹앱 열기</span>
                     </div>
-                    <p class="ios-cap">허용</p>
+                    <p class="ios-cap">웹앱 열기</p>
                   </li>
                   <li>
-                    <div class="ios-mini ios-set" role="img" aria-label="설정 앱 맨 위의 프로파일이 다운로드됨 줄을 누르는 그림">
+                    <div class="ios-mini ios-share" role="img" aria-label="웹앱을 연 Safari 아래 막대 가운데 공유 버튼을 누르는 그림">
                       <span class="ios-no" aria-hidden="true">2</span>
-                      <span class="ios-row on">
-                        프로파일 다운로드됨
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="m9 6 6 6-6 6"/></svg>
+                      <span class="ios-url"></span>
+                      <span class="ios-bar">
+                        <i></i><i></i>
+                        <b><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12"/><path d="m8 7 4-4 4 4"/><path d="M6 11H5v10h14V11h-1"/></svg></b>
+                        <i></i><i></i>
                       </span>
-                      <span class="ios-row dim"></span>
-                      <span class="ios-row dim"></span>
                     </div>
-                    <p class="ios-cap">설정에서 설치</p>
+                    <p class="ios-cap">공유 버튼</p>
                   </li>
                   <li>
-                    <div class="ios-mini ios-home" role="img" aria-label="홈 화면에 앞마당 아이콘이 생긴 모습">
+                    <div class="ios-mini ios-add" role="img" aria-label="공유 메뉴에서 홈 화면에 추가를 고른 뒤 추가를 누르는 그림">
                       <span class="ios-no" aria-hidden="true">3</span>
-                      <span class="ios-apps"><i></i><i></i><i></i></span>
-                      <span class="ios-icon"><img src="/assets/logo.svg" alt="" width="40" height="40">앞마당</span>
+                      <span class="ios-row dim"></span>
+                      <span class="ios-row on">
+                        홈 화면에 추가
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="16" height="16" rx="4"/><path d="M12 8v8M8 12h8"/></svg>
+                      </span>
+                      <span class="ios-row dim"></span>
                     </div>
-                    <p class="ios-cap">아이콘 완성</p>
+                    <p class="ios-cap">홈 화면에 추가</p>
                   </li>
                 </ol>
 
-                <a class="btn btn-brick btn-block" id="profile-btn" aria-disabled="true">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="4" width="16" height="16" rx="4"/><path d="M12 8v8M8 12h8"/></svg>
-                  <span id="profile-label">설치 파일 준비 중</span>
+                <a class="btn btn-brick btn-block" id="webapp-btn" aria-disabled="true">
+                  <svg class="ic-lock" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="11" width="14" height="10" rx="2.5"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></svg>
+                  <svg class="ic-open" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="m15.5 8.5-2 5-5 2 2-5Z"/></svg>
+                  <span id="webapp-label">웹앱 주소 준비 중</span>
                 </a>
-                <p class="get-meta">‘서명되지 않음’ 표시는 시연용이라 떠요</p>
-
-                <details class="ios-alt">
-                  <summary>
-                    또는 Safari에서 직접 홈 화면에 추가
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>
-                  </summary>
-                  <a class="btn btn-forest btn-block" id="webapp-btn" aria-disabled="true">
-                    <svg class="ic-lock" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="11" width="14" height="10" rx="2.5"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></svg>
-                    <svg class="ic-open" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="m15.5 8.5-2 5-5 2 2-5Z"/></svg>
-                    <span id="webapp-label">웹앱 주소 준비 중</span>
-                  </a>
-                  <ol class="ios-steps">
-                    <li>
-                      <div class="ios-mini ios-share" role="img" aria-label="웹앱을 연 Safari 아래 막대에서 공유 버튼을 누르는 그림">
-                        <span class="ios-no" aria-hidden="true">1</span>
-                        <span class="ios-url"></span>
-                        <span class="ios-bar">
-                          <i></i><i></i>
-                          <b><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12"/><path d="m8 7 4-4 4 4"/><path d="M6 11H5v10h14V11h-1"/></svg></b>
-                          <i></i><i></i>
-                        </span>
-                      </div>
-                      <p class="ios-cap">공유 버튼</p>
-                    </li>
-                    <li>
-                      <div class="ios-mini ios-add" role="img" aria-label="공유 메뉴에서 홈 화면에 추가를 고르는 그림">
-                        <span class="ios-no" aria-hidden="true">2</span>
-                        <span class="ios-row dim"></span>
-                        <span class="ios-row on">
-                          홈 화면에 추가
-                          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="16" height="16" rx="4"/><path d="M12 8v8M8 12h8"/></svg>
-                        </span>
-                        <span class="ios-row dim"></span>
-                      </div>
-                      <p class="ios-cap">홈 화면에 추가</p>
-                    </li>
-                    <li>
-                      <div class="ios-mini ios-home" role="img" aria-label="홈 화면에 앞마당 아이콘이 생긴 모습">
-                        <span class="ios-no" aria-hidden="true">3</span>
-                        <span class="ios-apps"><i></i><i></i><i></i></span>
-                        <span class="ios-icon"><img src="/assets/logo.svg" alt="" width="40" height="40">앞마당</span>
-                      </div>
-                      <p class="ios-cap">아이콘 완성</p>
-                    </li>
-                  </ol>
-                </details>
+                <p class="get-meta">웹앱이 열리면 아래 가운데 공유 버튼을 눌러요</p>
               </div>
 
-              <!-- 카카오톡·네이버 앱 안, 크롬 등: 프로필은 Safari에서만 설치된다 -->
+              <!-- 카카오톡·네이버 앱 안, 크롬 등: 홈 화면에 추가는 Safari에서만 된다 -->
               <div class="ios-mode" data-for="not-safari">
                 <div class="ios-open">
                   <div class="ios-mini ios-inapp" role="img" aria-label="앱 안 브라우저 오른쪽 아래 메뉴에서 다른 브라우저로 열기를 고르는 그림">
@@ -173,7 +130,7 @@
                   <div class="qr-box" id="ios-qr" role="img" aria-label="앱 받기 주소 dev-riverkim.github.io/?get=app 의 QR 코드"></div>
                   <div>
                     <p class="get-title">아이폰 카메라로 찍으세요</p>
-                    <p class="get-line">Safari에서 [앱 아이콘 설치하기] 버튼이 떠요.</p>
+                    <p class="get-line">Safari에서 홈 화면에 추가하는 법이 떠요.</p>
                   </div>
                 </div>
               </div>

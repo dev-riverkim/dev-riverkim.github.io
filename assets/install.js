@@ -1,16 +1,15 @@
 import { detectOS, iosBrowser } from '/assets/device.js';
 
-// 주소는 config.js 한 곳에서만 관리한다.
-const config = window.APM_CONFIG ?? {};
+// 웹앱 주소는 config.js 한 곳에서만 관리한다.
+const url = (window.APM_CONFIG ?? {}).webPreviewUrl;
 
-if (config.webPreviewUrl) {
+if (url) {
   const link = document.getElementById('web-open-link');
-  link.href = config.webPreviewUrl;
-  link.textContent = new URL(config.webPreviewUrl).host;
-}
-
-// 설치 프로필은 아이폰 Safari에서만 설치 화면으로 넘어간다. 다른 곳에서는 버튼을 숨겨 둔다.
-if (config.iosProfileUrl && detectOS() === 'ios' && iosBrowser() === 'safari') {
-  document.getElementById('profile-link').href = config.iosProfileUrl;
-  document.getElementById('profile-open').hidden = false;
+  link.href = url;
+  link.textContent = new URL(url).host;
+  // '홈 화면에 추가'는 아이폰 Safari에서만 되므로 그때만 바로 여는 버튼을 보인다.
+  if (detectOS() === 'ios' && iosBrowser() === 'safari') {
+    document.getElementById('web-open-btn').href = url;
+    document.getElementById('web-open').hidden = false;
+  }
 }

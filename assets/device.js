@@ -8,7 +8,7 @@ export function detectOS() {
   return 'pc';
 }
 
-// 설치 프로필은 Safari에서만 설치 화면으로 넘어간다.
+// 아이폰 '홈 화면에 추가'는 Safari에서만 제대로 된다(앱 안 브라우저에는 그 메뉴가 없다).
 // 'safari' | 'inapp'(카카오톡·네이버 같은 앱 안 브라우저) | 'other'(크롬 등 다른 브라우저)
 export function iosBrowser() {
   const ua = navigator.userAgent;
