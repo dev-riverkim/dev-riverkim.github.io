@@ -78,7 +78,7 @@ function endHTML(s) {
         <div class="t-qr" id="end-qr" role="img" aria-label="앱 받기 주소 QR 코드"></div>
         <div>
           <p class="t-cta-title">아이폰·안드로이드 모두 카메라로 찍으세요</p>
-          <p class="t-cta-line">안드로이드는 바로 받아지고, 아이폰은 웹앱으로 열려요.</p>
+          <p class="t-cta-line">안드로이드는 바로 받아지고, 아이폰은 앱 아이콘을 설치해요.</p>
         </div>
       </div>
       <a class="btn btn-brick btn-block t-cta-get" href="/?get=app">${ICON.down}앱 받기</a>

@@ -1,4 +1,5 @@
 import { qrSvg } from '/assets/qr.js';
+import { detectOS, iosBrowser } from '/assets/device.js';
 
 const config = window.APM_CONFIG ?? {};
 const $ = (sel) => document.querySelector(sel);
@@ -17,14 +18,6 @@ function takeGetParam() {
   return value === 'app' || value === 'android';
 }
 
-function detectOS() {
-  const ua = navigator.userAgent;
-  if (/Android/i.test(ua)) return 'android';
-  // iPadOS 13+는 데스크톱 Safari로 자신을 소개하므로 터치 지점 수로 가른다.
-  if (/iPhone|iPad|iPod/i.test(ua) || (/Macintosh/.test(ua) && navigator.maxTouchPoints > 1)) return 'ios';
-  return 'pc';
-}
-
 function showPane(os) {
   for (const pane of document.querySelectorAll('.get-pane')) {
     pane.hidden = pane.dataset.pane !== os;
@@ -32,14 +25,15 @@ function showPane(os) {
   for (const chip of document.querySelectorAll('.other-chip')) {
     chip.setAttribute('aria-pressed', String(chip.dataset.os === os));
   }
-  if (os === 'pc') renderPageQR();
+  if (os === 'pc') renderQR('#qr');
+  if (os === 'ios' && detectOS() !== 'ios') renderQR('#ios-qr');
 }
 
-let pageQRDone = false;
-function renderPageQR() {
-  if (pageQRDone) return;
-  pageQRDone = true;
-  $('#qr').innerHTML = qrSvg(APP_GET_URL);
+const qrDone = new Set();
+function renderQR(sel) {
+  if (qrDone.has(sel)) return;
+  qrDone.add(sel);
+  $(sel).innerHTML = qrSvg(APP_GET_URL);
 }
 
 const dateFmt = new Intl.DateTimeFormat('ko-KR', { timeZone: 'Asia/Seoul', month: 'long', day: 'numeric' });
@@ -140,17 +134,32 @@ function setupWebApp() {
   $('#webapp-label').textContent = '앞마당 웹앱 열기';
 }
 
-function setupCopy() {
-  const btn = $('#copy-code');
+// 아이폰 칸은 기기·브라우저마다 다른 안내를 보인다. 프로필은 Safari에서만 설치 화면으로 넘어가므로
+// 다른 브라우저에서는 버튼 대신 Safari로 여는 법을 보인다.
+function setupIOS(os) {
+  const pane = $('[data-pane="ios"]');
+  const mode = os === 'ios' ? iosBrowser() : 'device';
+  pane.dataset.ios = mode;
+  if (mode === 'other') $('#ios-open-line').textContent = '주소를 복사해 Safari에 붙여 넣어요.';
+  if (config.iosProfileUrl) {
+    const btn = $('#profile-btn');
+    btn.href = config.iosProfileUrl;
+    btn.removeAttribute('aria-disabled');
+    $('#profile-label').textContent = '앱 아이콘 설치하기';
+  }
+}
+
+function copyOnClick(btn, text) {
   const label = btn.querySelector('span');
+  const idle = label.textContent;
   btn.addEventListener('click', async () => {
     try {
-      await navigator.clipboard.writeText(btn.dataset.code);
+      await navigator.clipboard.writeText(text);
       label.textContent = '복사됨';
     } catch {
       label.textContent = '길게 눌러 복사';
     }
-    setTimeout(() => { label.textContent = '복사'; }, 2000);
+    setTimeout(() => { label.textContent = idle; }, 2000);
   });
 }
 
@@ -168,6 +177,8 @@ for (const chip of document.querySelectorAll('.other-chip')) {
   chip.addEventListener('click', () => showPane(chip.dataset.os));
 }
 setupWebApp();
-setupCopy();
+setupIOS(os);
+copyOnClick($('#copy-code'), $('#copy-code').dataset.code);
+copyOnClick($('#copy-url'), APP_GET_URL);
 renderDecorQR();
 loadLatest({ autoStart: fromQR && os === 'android' });
