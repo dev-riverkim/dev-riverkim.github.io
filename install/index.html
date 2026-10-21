@@ -1,0 +1,521 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>설치 전에 볼 것 · 앞마당</title>
+  <meta name="description" content="앞마당 설치 주의사항: 안드로이드 설치 순서, 안전하게 받는 법, 권한, 아이폰 웹앱, 개인정보, 지우는 법">
+  <meta name="theme-color" content="#F6F2EA">
+  <link rel="icon" href="/assets/logo.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
+  <link rel="stylesheet" href="/assets/site.css">
+  <link rel="stylesheet" href="/assets/install.css">
+</head>
+<body>
+  <svg class="sprite" aria-hidden="true" focusable="false">
+    <symbol id="i-android" viewBox="0 0 24 24"><rect x="5" y="9" width="14" height="11" rx="3"/><path d="M8 9a4 4 0 0 1 8 0"/><path d="m7 4 1.5 2.5M17 4l-1.5 2.5"/><path d="M10 13h.01M14 13h.01"/></symbol>
+    <symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 3 4 6v6c0 4.5 3.4 8.3 8 9 4.6-.7 8-4.5 8-9V6Z"/><path d="m9 12 2 2 4-4"/></symbol>
+    <symbol id="i-key" viewBox="0 0 24 24"><rect x="4" y="11" width="16" height="10" rx="2.5"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/><path d="M12 15v2"/></symbol>
+    <symbol id="i-iphone" viewBox="0 0 24 24"><rect x="6" y="2.5" width="12" height="19" rx="3"/><path d="M10.5 5.5h3"/><path d="M11 18.5h2"/></symbol>
+    <symbol id="i-user-x" viewBox="0 0 24 24"><circle cx="10" cy="8" r="4"/><path d="M3 21a7 7 0 0 1 12.5-4.3"/><path d="m17 15 4 4M21 15l-4 4"/></symbol>
+    <symbol id="i-trash" viewBox="0 0 24 24"><path d="M4 7h16"/><path d="M9 7V4.5h6V7"/><path d="M6 7l1 13h10l1-13"/><path d="M10 11v5M14 11v5"/></symbol>
+    <symbol id="i-download" viewBox="0 0 24 24"><path d="M12 4v11"/><path d="m7 10 5 5 5-5"/><path d="M5 20h14"/></symbol>
+    <symbol id="i-check" viewBox="0 0 24 24"><path d="m5 12.5 4.5 4.5L19 7.5"/></symbol>
+    <symbol id="i-alert" viewBox="0 0 24 24"><path d="M10.3 4.2 2.6 18a2 2 0 0 0 1.7 3h15.4a2 2 0 0 0 1.7-3L13.7 4.2a2 2 0 0 0-3.4 0Z"/><path d="M12 9.5v4.5"/><path d="M12 17.5h.01"/></symbol>
+    <symbol id="i-camera" viewBox="0 0 24 24"><path d="M4 8h3l2-3h6l2 3h3a1 1 0 0 1 1 1v10a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V9a1 1 0 0 1 1-1Z"/><circle cx="12" cy="13.5" r="3.5"/></symbol>
+    <symbol id="i-image" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="16" rx="2.5"/><circle cx="9" cy="10" r="2"/><path d="m21 16-5-5-9 9"/></symbol>
+    <symbol id="i-bell" viewBox="0 0 24 24"><path d="M6 16V11a6 6 0 0 1 12 0v5l2 2H4Z"/><path d="M10 21h4"/></symbol>
+    <symbol id="i-bell-off" viewBox="0 0 24 24"><path d="M8.5 5.1A6 6 0 0 1 18 11v4"/><path d="M6 11v5l-2 2h13"/><path d="M10 21h4"/><path d="M3 3l18 18"/></symbol>
+    <symbol id="i-wifi-off" viewBox="0 0 24 24"><path d="M2 8.8a15 15 0 0 1 5-2.9"/><path d="M11 5a15 15 0 0 1 11 3.8"/><path d="M5 12.4a10 10 0 0 1 5.2-2.3"/><path d="M15.6 10.6A10 10 0 0 1 19 12.4"/><path d="M8.6 16a5 5 0 0 1 6.8 0"/><path d="M12 20h.01"/><path d="M3 3l18 18"/></symbol>
+    <symbol id="i-pin" viewBox="0 0 24 24"><path d="M12 21s-7-6.1-7-11.5a7 7 0 0 1 14 0C19 14.9 12 21 12 21Z"/><circle cx="12" cy="9.5" r="2.5"/></symbol>
+    <symbol id="i-pin-off" viewBox="0 0 24 24"><path d="M7.1 5.1A7 7 0 0 1 19 9.5c0 2-1 4.1-2.3 6"/><path d="M14.6 18.5C13.2 20 12 21 12 21s-7-6.1-7-11.5c0-.8.1-1.6.4-2.3"/><path d="M3 3l18 18"/></symbol>
+    <symbol id="i-bluetooth" viewBox="0 0 24 24"><path d="m7 7 10 10-5 4V3l5 4L7 17"/></symbol>
+    <symbol id="i-mic" viewBox="0 0 24 24"><rect x="9" y="3" width="6" height="11" rx="3"/><path d="M5 11a7 7 0 0 0 14 0"/><path d="M12 18v3"/></symbol>
+    <symbol id="i-contacts" viewBox="0 0 24 24"><rect x="4" y="3" width="16" height="18" rx="2.5"/><circle cx="12" cy="10" r="3"/><path d="M7.5 17a5 5 0 0 1 9 0"/></symbol>
+    <symbol id="i-phone" viewBox="0 0 24 24"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2Z"/></symbol>
+    <symbol id="i-share" viewBox="0 0 24 24"><path d="M12 3v12"/><path d="m8 7 4-4 4 4"/><path d="M8 11H6a1 1 0 0 0-1 1v8a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-8a1 1 0 0 0-1-1h-2"/></symbol>
+    <symbol id="i-plus-sq" viewBox="0 0 24 24"><rect x="4" y="4" width="16" height="16" rx="3"/><path d="M12 8.5v7M8.5 12h7"/></symbol>
+    <symbol id="i-copy" viewBox="0 0 24 24"><rect x="8" y="8" width="12" height="12" rx="2"/><path d="M16 8V5a1 1 0 0 0-1-1H5a1 1 0 0 0-1 1v10a1 1 0 0 0 1 1h3"/></symbol>
+    <symbol id="i-book" viewBox="0 0 24 24"><path d="M4 5.5A1.5 1.5 0 0 1 5.5 4H11v16H5.5A1.5 1.5 0 0 1 4 18.5Z"/><path d="M20 5.5A1.5 1.5 0 0 0 18.5 4H13v16h5.5a1.5 1.5 0 0 0 1.5-1.5Z"/></symbol>
+    <symbol id="i-dots" viewBox="0 0 24 24"><path d="M12 6h.01M12 12h.01M12 18h.01"/></symbol>
+    <symbol id="i-chev-l" viewBox="0 0 24 24"><path d="m15 5-7 7 7 7"/></symbol>
+    <symbol id="i-chev-r" viewBox="0 0 24 24"><path d="m9 5 7 7-7 7"/></symbol>
+    <symbol id="i-lock" viewBox="0 0 24 24"><rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></symbol>
+    <symbol id="i-spark" viewBox="0 0 24 24"><path d="M12 3c.6 4.6 2.4 6.4 7 7-4.6.6-6.4 2.4-7 7-.6-4.6-2.4-6.4-7-7 4.6-.6 6.4-2.4 7-7Z"/><path d="M19 15.5c.3 1.7 1 2.4 2.5 2.5-1.6.2-2.2.9-2.5 2.5-.2-1.6-.9-2.3-2.5-2.5 1.6-.1 2.3-.8 2.5-2.5Z"/></symbol>
+    <symbol id="i-file" viewBox="0 0 24 24"><path d="M6 3h8l5 5v12a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1Z"/><path d="M14 3v5h5"/></symbol>
+    <symbol id="i-db" viewBox="0 0 24 24"><ellipse cx="12" cy="5.5" rx="7" ry="2.5"/><path d="M5 5.5v13c0 1.4 3.1 2.5 7 2.5s7-1.1 7-2.5v-13"/><path d="M5 12c0 1.4 3.1 2.5 7 2.5s7-1.1 7-2.5"/></symbol>
+    <symbol id="i-arrow-r" viewBox="0 0 24 24"><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></symbol>
+    <symbol id="i-home" viewBox="0 0 24 24"><path d="M4 11 12 4l8 7"/><path d="M6 9.5V20h12V9.5"/></symbol>
+  </svg>
+
+  <a class="skip" href="#main">본문으로 건너뛰기</a>
+  <header class="top">
+    <div class="wrap">
+      <a class="brand" href="/"><img src="/assets/logo.svg" alt="" width="32" height="32">앞마당</a>
+      <a class="top-link" href="/?get=app">앱 받기</a>
+    </div>
+  </header>
+
+  <main id="main">
+    <div class="wrap ins-head">
+      <h1>설치 전에 이것만 보세요</h1>
+      <p>안드로이드는 4단계, 아이폰은 홈 화면에 추가하면 돼요.</p>
+    </div>
+
+    <nav class="jump" aria-label="이 페이지 바로가기">
+      <ul>
+        <li><a href="#android"><svg class="i"><use href="#i-android"/></svg>안드로이드</a></li>
+        <li><a href="#safe"><svg class="i"><use href="#i-shield"/></svg>안전하게</a></li>
+        <li><a href="#permissions"><svg class="i"><use href="#i-key"/></svg>권한</a></li>
+        <li><a href="#iphone"><svg class="i"><use href="#i-iphone"/></svg>아이폰</a></li>
+        <li><a href="#privacy"><svg class="i"><use href="#i-user-x"/></svg>개인정보</a></li>
+        <li><a href="#remove"><svg class="i"><use href="#i-trash"/></svg>지우기</a></li>
+      </ul>
+    </nav>
+
+    <!-- 안드로이드 -->
+    <section class="sec t-forest" id="android" aria-labelledby="h-android">
+      <div class="wrap">
+        <div class="sec-head">
+          <span class="sec-ico" aria-hidden="true"><svg class="i"><use href="#i-android"/></svg></span>
+          <div>
+            <h2 id="h-android">안드로이드 설치</h2>
+            <p>스토어 밖 앱이라 허용 한 번, 경고 한 번이 나와요.</p>
+          </div>
+        </div>
+
+        <ol class="grid g4">
+          <li class="step card">
+            <div class="art" role="img" aria-label="브라우저 다운로드 알림에 apmadang.apk 다운로드 완료와 열기 버튼이 보이는 화면">
+              <div class="ph"><div class="scr scr-dim">
+                <div class="sb"><b>9:41</b><span class="dots"><i></i><i></i><i></i></span></div>
+                <div class="noti hl">
+                  <span class="noti-ico logo"><img src="/assets/logo.svg" alt="" width="26" height="26"></span>
+                  <span class="noti-txt"><b>다운로드 완료</b><span>apmadang.apk</span></span>
+                </div>
+                <div class="noti-act"><span>열기</span></div>
+                <div class="noti dim"><span class="noti-ico gray"></span><span class="noti-txt"><i class="bar w70"></i><i class="bar w40"></i></span></div>
+              </div></div>
+            </div>
+            <div class="step-body">
+              <p class="step-top"><span class="no">1</span></p>
+              <h3>파일 받기</h3>
+              <p class="step-line">다운로드 알림에서 apmadang.apk를 눌러 열어요.</p>
+            </div>
+          </li>
+
+          <li class="step card">
+            <div class="art" role="img" aria-label="출처를 알 수 없는 앱 설치 설정에서 Chrome만 허용이 켜져 있고 카카오톡과 내 파일은 꺼져 있는 화면">
+              <div class="ph"><div class="scr">
+                <div class="sb"><b>9:41</b><span class="dots"><i></i><i></i><i></i></span></div>
+                <p class="path"><svg class="i"><use href="#i-chev-l"/></svg>출처를 알 수 없는 앱 설치</p>
+                <div class="row hl"><span>Chrome</span><i class="tg on"></i></div>
+                <div class="row dim"><span>카카오톡</span><i class="tg"></i></div>
+                <div class="row dim"><span>내 파일</span><i class="tg"></i></div>
+              </div></div>
+            </div>
+            <div class="step-body">
+              <p class="step-top"><span class="no">2</span><span class="tag warn"><svg class="i"><use href="#i-alert"/></svg>주의</span></p>
+              <h3>쓰는 브라우저만 허용</h3>
+              <p class="step-line">크롬이나 삼성 인터넷 하나만 켜요. 다른 앱은 그대로 둬요.</p>
+            </div>
+          </li>
+
+          <li class="step card">
+            <div class="art" role="img" aria-label="Play 프로텍트 확인되지 않은 앱 경고 창에서 세부정보 더보기를 펼치고 무시하고 설치를 누르는 화면">
+              <div class="ph"><div class="scr scr-dim">
+                <div class="sb"><b>9:41</b><span class="dots"><i></i><i></i><i></i></span></div>
+                <div class="dlg">
+                  <p class="dlg-brand"><svg class="i"><use href="#i-shield"/></svg>Play 프로텍트</p>
+                  <p class="dlg-q">확인되지 않은 앱</p>
+                  <p class="dlg-more">세부정보 더보기<svg class="i"><use href="#i-chev-r"/></svg></p>
+                  <span class="dlg-cta">무시하고 설치</span>
+                </div>
+              </div></div>
+            </div>
+            <div class="step-body">
+              <p class="step-top"><span class="no">3</span></p>
+              <h3>Play 프로텍트 경고</h3>
+              <p class="step-line">스토어 밖 앱이라 떠요. ‘세부정보 더보기’ → ‘무시하고 설치’.</p>
+            </div>
+          </li>
+
+          <li class="step card is-danger">
+            <div class="art" role="img" aria-label="출처를 알 수 없는 앱 설치 설정에서 Chrome 허용을 다시 끈 화면">
+              <div class="ph"><div class="scr">
+                <div class="sb"><b>9:42</b><span class="dots"><i></i><i></i><i></i></span></div>
+                <p class="path"><svg class="i"><use href="#i-chev-l"/></svg>출처를 알 수 없는 앱 설치</p>
+                <div class="row hl-off"><span>Chrome</span><i class="tg"></i></div>
+                <div class="row dim"><span>카카오톡</span><i class="tg"></i></div>
+                <div class="row dim"><span>내 파일</span><i class="tg"></i></div>
+              </div></div>
+            </div>
+            <div class="step-body">
+              <p class="step-top"><span class="no">4</span><span class="tag danger"><svg class="i"><use href="#i-alert"/></svg>꼭</span></p>
+              <h3>허용 다시 끄기</h3>
+              <p class="step-line">설치가 끝나면 2단계에서 켠 허용을 바로 꺼요.</p>
+            </div>
+          </li>
+        </ol>
+
+        <div class="extra card">
+          <div class="art" role="img" aria-label="갤럭시 설정의 보안 및 개인정보 보호에서 자동 차단 토글이 보이는 화면">
+            <div class="ph"><div class="scr">
+              <div class="sb"><b>9:41</b><span class="dots"><i></i><i></i><i></i></span></div>
+              <p class="path"><svg class="i"><use href="#i-chev-l"/></svg>보안 및 개인정보 보호</p>
+              <div class="row hl"><span>자동 차단</span><i class="tg on"></i></div>
+              <div class="row dim"><span>앱 보안</span></div>
+            </div></div>
+          </div>
+          <div class="step-body">
+            <p class="step-top"><span class="tag warn"><svg class="i"><use href="#i-alert"/></svg>갤럭시</span></p>
+            <h3>자동 차단이 켜져 있으면</h3>
+            <p class="step-line">잠깐 끄고 설치해요. 설치가 끝나면 다시 켜요.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 안전하게 받기 -->
+    <section class="sec t-sky" id="safe" aria-labelledby="h-safe">
+      <div class="wrap">
+        <div class="sec-head">
+          <span class="sec-ico" aria-hidden="true"><svg class="i"><use href="#i-shield"/></svg></span>
+          <div>
+            <h2 id="h-safe">안전하게 받기</h2>
+            <p>세 가지만 맞으면 진짜 앞마당이에요.</p>
+          </div>
+        </div>
+
+        <ul class="grid g3">
+          <li class="step card">
+            <div class="art" role="img" aria-label="브라우저 주소창에 dev-riverkim.github.io 가 보이고 확인 표시가 붙은 화면">
+              <div class="ph"><div class="scr">
+                <div class="sb"><b>9:41</b><span class="dots"><i></i><i></i><i></i></span></div>
+                <div class="url hl"><svg class="i"><use href="#i-lock"/></svg><span>dev-riverkim.github.io</span></div>
+                <i class="bar w90"></i><i class="bar w70"></i><i class="bar w50"></i>
+                <span class="ok-badge"><svg class="i"><use href="#i-check"/></svg></span>
+              </div></div>
+            </div>
+            <div class="step-body">
+              <p class="step-top"><span class="chk"><svg class="i"><use href="#i-check"/></svg></span></p>
+              <h3>주소는 하나뿐</h3>
+              <p class="step-line"><b class="mono">dev-riverkim.github.io</b>에서만 받아요.</p>
+            </div>
+          </li>
+          <li class="step card">
+            <div class="art" role="img" aria-label="내 파일 다운로드 목록에 apmadang.apk 파일이 확인 표시와 함께 보이는 화면">
+              <div class="ph"><div class="scr">
+                <div class="sb"><b>9:41</b><span class="dots"><i></i><i></i><i></i></span></div>
+                <p class="path"><svg class="i"><use href="#i-chev-l"/></svg>다운로드</p>
+                <div class="file hl"><img class="file-logo" src="/assets/logo.svg" alt="" width="18" height="18"><b>apmadang.apk</b></div>
+                <div class="file dim"><svg class="i"><use href="#i-file"/></svg><i class="bar w60"></i></div>
+                <span class="ok-badge"><svg class="i"><use href="#i-check"/></svg></span>
+              </div></div>
+            </div>
+            <div class="step-body">
+              <p class="step-top"><span class="chk"><svg class="i"><use href="#i-check"/></svg></span></p>
+              <h3>파일 이름 확인</h3>
+              <p class="step-line"><b class="mono">apmadang.apk</b>가 아니면 열지 마세요.</p>
+            </div>
+          </li>
+          <li class="step card">
+            <div class="art" role="img" aria-label="설정의 앱 정보에서 앞마당 아이콘과 패키지 이름 com.devriverkim.apmadang 이 보이는 화면">
+              <div class="ph"><div class="scr">
+                <div class="sb"><b>9:41</b><span class="dots"><i></i><i></i><i></i></span></div>
+                <p class="path"><svg class="i"><use href="#i-chev-l"/></svg>앱 정보</p>
+                <div class="appinfo"><img src="/assets/logo.svg" alt="" width="34" height="34"><b>앞마당</b></div>
+                <div class="pkg hl"><span>패키지</span><b>com.devriverkim.apmadang</b></div>
+              </div></div>
+            </div>
+            <div class="step-body">
+              <p class="step-top"><span class="chk"><svg class="i"><use href="#i-check"/></svg></span></p>
+              <h3>설치 뒤 패키지 확인</h3>
+              <p class="step-line">설정 → 앱 → 앞마당에서 <b class="mono">com.devriverkim.apmadang</b>인지 봐요.</p>
+            </div>
+          </li>
+        </ul>
+
+        <p class="alert" role="note">
+          <svg class="i"><use href="#i-alert"/></svg>
+          <span>카톡·문자로 온 다른 APK 링크는 받지 마세요</span>
+        </p>
+      </div>
+    </section>
+
+    <!-- 권한 -->
+    <section class="sec t-sun" id="permissions" aria-labelledby="h-perm">
+      <div class="wrap">
+        <div class="sec-head">
+          <span class="sec-ico" aria-hidden="true"><svg class="i"><use href="#i-key"/></svg></span>
+          <div>
+            <h2 id="h-perm">앱이 묻는 권한</h2>
+            <p>세 가지만 물어요. 거부해도 앱은 쓸 수 있어요.</p>
+          </div>
+        </div>
+
+        <ul class="grid g4">
+          <li class="step card">
+            <div class="art" role="img" aria-label="앞마당에서 카메라를 쓰도록 허용할지 묻는 권한 창">
+              <div class="ph"><div class="scr scr-shade">
+                <div class="sb"><b>9:41</b><span class="dots"><i></i><i></i><i></i></span></div>
+                <div class="perm">
+                  <svg class="i"><use href="#i-camera"/></svg>
+                  <p>앞마당에서 카메라를 쓰도록 허용할까요?</p>
+                  <span class="perm-yes">앱 사용 중에만 허용</span>
+                  <span class="perm-no">허용 안함</span>
+                </div>
+              </div></div>
+            </div>
+            <div class="step-body">
+              <h3>카메라</h3>
+              <p class="step-line">고장 사진과 설비 스티커를 찍어요.</p>
+              <p class="deny"><b>거부하면</b>사진을 직접 골라 신고해요</p>
+            </div>
+          </li>
+          <li class="step card">
+            <div class="art" role="img" aria-label="앞마당에서 사진에 접근하도록 허용할지 묻는 권한 창">
+              <div class="ph"><div class="scr scr-shade">
+                <div class="sb"><b>9:41</b><span class="dots"><i></i><i></i><i></i></span></div>
+                <div class="perm">
+                  <svg class="i"><use href="#i-image"/></svg>
+                  <p>앞마당에서 사진에 접근하도록 허용할까요?</p>
+                  <span class="perm-yes">허용</span>
+                  <span class="perm-no">허용 안함</span>
+                </div>
+              </div></div>
+            </div>
+            <div class="step-body">
+              <h3>사진</h3>
+              <p class="step-line">신고할 때 사진을 붙여요.</p>
+              <p class="deny"><b>거부하면</b>사진 없이 신고해도 돼요</p>
+            </div>
+          </li>
+          <li class="step card">
+            <div class="art" role="img" aria-label="앞마당에서 알림을 보내도록 허용할지 묻는 권한 창">
+              <div class="ph"><div class="scr scr-shade">
+                <div class="sb"><b>9:41</b><span class="dots"><i></i><i></i><i></i></span></div>
+                <div class="perm">
+                  <svg class="i"><use href="#i-bell"/></svg>
+                  <p>앞마당에서 알림을 보내도록 허용할까요?</p>
+                  <span class="perm-yes">허용</span>
+                  <span class="perm-no">허용 안함</span>
+                </div>
+              </div></div>
+            </div>
+            <div class="step-body">
+              <h3>알림</h3>
+              <p class="step-line">예약 확정, 휴장, 대기 순번이 올라온 걸 알려요.</p>
+              <p class="deny"><b>거부하면</b>앱 안 알림함에서만 봐요</p>
+            </div>
+          </li>
+          <li class="step card">
+            <div class="art" role="img" aria-label="설정의 앱, 앞마당, 권한 화면에서 카메라·사진·알림을 하나씩 켜고 끌 수 있는 모습">
+              <div class="ph"><div class="scr">
+                <div class="sb"><b>9:41</b><span class="dots"><i></i><i></i><i></i></span></div>
+                <p class="path"><svg class="i"><use href="#i-chev-l"/></svg>앞마당 › 권한</p>
+                <div class="row"><span>카메라</span><i class="tg on"></i></div>
+                <div class="row"><span>사진</span><i class="tg on"></i></div>
+                <div class="row dim"><span>알림</span><i class="tg"></i></div>
+              </div></div>
+            </div>
+            <div class="step-body">
+              <h3>나중에 바꾸기</h3>
+              <p class="step-line">설정 → 앱 → 앞마당 → 권한에서 언제든 바꿔요.</p>
+            </div>
+          </li>
+        </ul>
+
+        <div class="none">
+          <h3>요청하지 않는 권한</h3>
+          <ul>
+            <li><svg class="i"><use href="#i-pin"/></svg>위치</li>
+            <li><svg class="i"><use href="#i-bluetooth"/></svg>블루투스</li>
+            <li><svg class="i"><use href="#i-mic"/></svg>마이크</li>
+            <li><svg class="i"><use href="#i-contacts"/></svg>연락처</li>
+            <li><svg class="i"><use href="#i-phone"/></svg>전화</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- 아이폰 -->
+    <section class="sec t-brick" id="iphone" aria-labelledby="h-iphone">
+      <div class="wrap">
+        <div class="sec-head">
+          <span class="sec-ico" aria-hidden="true"><svg class="i"><use href="#i-iphone"/></svg></span>
+          <div>
+            <h2 id="h-iphone">아이폰은 웹앱으로</h2>
+            <p>설치 파일 없이 홈 화면에 추가해요.</p>
+          </div>
+        </div>
+
+        <ol class="grid g4">
+          <li class="step card">
+            <div class="art" role="img" aria-label="카카오톡 안 브라우저 오른쪽 아래 메뉴에서 다른 브라우저로 열기를 고르는 화면">
+              <div class="ph ios"><div class="scr">
+                <div class="sb"><b>9:41</b><span class="dots"><i></i><i></i><i></i></span></div>
+                <div class="inapp-top"><b>카카오톡</b></div>
+                <i class="bar w90"></i><i class="bar w70"></i>
+                <div class="pop"><span class="hl">다른 브라우저로 열기</span><span>링크 복사</span></div>
+                <div class="inapp-bar"><svg class="i"><use href="#i-chev-l"/></svg><svg class="i"><use href="#i-chev-r"/></svg><span class="hl-ico"><svg class="i"><use href="#i-dots"/></svg></span></div>
+              </div></div>
+            </div>
+            <div class="step-body">
+              <p class="step-top"><span class="no">1</span></p>
+              <h3>Safari로 열기</h3>
+              <p class="step-line">카톡·네이버 앱 안이면 오른쪽 아래 ‘다른 브라우저로 열기’ → Safari.</p>
+            </div>
+          </li>
+          <li class="step card">
+            <div class="art" role="img" aria-label="Safari 아래쪽 도구 막대에서 공유 버튼을 누르는 화면">
+              <div class="ph ios"><div class="scr">
+                <div class="sb"><b>9:41</b><span class="dots"><i></i><i></i><i></i></span></div>
+                <i class="bar w90"></i><i class="bar w70"></i><i class="bar w50"></i>
+                <div class="safari">
+                  <div class="url sm"><svg class="i"><use href="#i-lock"/></svg><span>apmadang.expo.app</span></div>
+                  <div class="safari-bar"><svg class="i"><use href="#i-chev-l"/></svg><span class="hl-ico"><svg class="i"><use href="#i-share"/></svg></span><svg class="i"><use href="#i-book"/></svg><svg class="i"><use href="#i-copy"/></svg></div>
+                </div>
+              </div></div>
+            </div>
+            <div class="step-body">
+              <p class="step-top"><span class="no">2</span></p>
+              <h3>공유 버튼</h3>
+              <p class="step-line">네모에 위 화살표가 있는 버튼을 눌러요.</p>
+            </div>
+          </li>
+          <li class="step card">
+            <div class="art" role="img" aria-label="공유 메뉴 목록에서 홈 화면에 추가를 고르는 화면">
+              <div class="ph ios"><div class="scr scr-shade">
+                <div class="sb"><b>9:41</b><span class="dots"><i></i><i></i><i></i></span></div>
+                <div class="sheet">
+                  <span><svg class="i"><use href="#i-copy"/></svg>복사</span>
+                  <span><svg class="i"><use href="#i-book"/></svg>읽기 목록에 추가</span>
+                  <span class="hl"><svg class="i"><use href="#i-plus-sq"/></svg>홈 화면에 추가</span>
+                </div>
+              </div></div>
+            </div>
+            <div class="step-body">
+              <p class="step-top"><span class="no">3</span></p>
+              <h3>‘홈 화면에 추가’</h3>
+              <p class="step-line">목록을 조금 내리면 보여요.</p>
+            </div>
+          </li>
+          <li class="step card">
+            <div class="art" role="img" aria-label="아이폰 홈 화면에 앞마당 아이콘이 새로 생긴 모습">
+              <div class="ph ios"><div class="scr scr-home">
+                <div class="sb"><b>9:41</b><span class="dots"><i></i><i></i><i></i></span></div>
+                <div class="apps">
+                  <span><i></i></span><span><i></i></span><span><i></i></span><span><i></i></span>
+                  <span><i></i></span><span><i></i></span>
+                  <span class="mine"><img src="/assets/logo.svg" alt="" width="34" height="34"><b>앞마당</b></span>
+                </div>
+              </div></div>
+            </div>
+            <div class="step-body">
+              <p class="step-top"><span class="no">4</span></p>
+              <h3>아이콘이 생겨요</h3>
+              <p class="step-line">이제 앱처럼 눌러서 열어요.</p>
+            </div>
+          </li>
+        </ol>
+
+        <ul class="limits">
+          <li><span class="lim-ico"><svg class="i"><use href="#i-bell-off"/></svg></span>앱 밖 알림은 아직 안 돼요</li>
+          <li><span class="lim-ico"><svg class="i"><use href="#i-wifi-off"/></svg></span>입장권은 한 번 열어 둬야 오프라인에서도 보여요</li>
+        </ul>
+        <p class="more" id="web-open" hidden><a class="btn btn-forest" id="web-open-link" href="https://apmadang.expo.app">아이폰 웹앱 열기<svg class="i"><use href="#i-arrow-r"/></svg></a></p>
+      </div>
+    </section>
+
+    <!-- 개인정보 -->
+    <section class="sec t-forest" id="privacy" aria-labelledby="h-privacy">
+      <div class="wrap">
+        <div class="sec-head">
+          <span class="sec-ico" aria-hidden="true"><svg class="i"><use href="#i-user-x"/></svg></span>
+          <div>
+            <h2 id="h-privacy">개인정보</h2>
+            <p>시연용 앱이라 꼭 필요한 것만 받아요.</p>
+          </div>
+        </div>
+
+        <ul class="priv">
+          <li class="card"><span class="p-ico forest"><svg class="i"><use href="#i-user-x"/></svg></span><span><b>실명·전화번호는 안 받아요</b><span class="sub">닉네임과 동·호수만 써요</span></span></li>
+          <li class="card"><span class="p-ico sky"><svg class="i"><use href="#i-pin-off"/></svg></span><span><b>사진 위치 정보는 지워요</b><span class="sub">올리기 전에 기기에서 지워요</span></span></li>
+          <li class="card"><span class="p-ico forest"><svg class="i"><use href="#i-spark"/></svg></span><span><b>AI 도우미 대화는 저장 안 해요</b><span class="sub">답을 만들 때만 Google Gemini로 보내요</span></span></li>
+          <li class="card is-warn"><span class="p-ico warn"><svg class="i"><use href="#i-alert"/></svg></span><span><b>실제 개인정보는 넣지 마세요</b><span class="sub">시연용 앱이에요</span></span></li>
+        </ul>
+        <p class="more"><a class="btn btn-ghost" href="/privacy/">개인정보처리방침 자세히<svg class="i"><use href="#i-arrow-r"/></svg></a></p>
+      </div>
+    </section>
+
+    <!-- 지우기 -->
+    <section class="sec t-forest" id="remove" aria-labelledby="h-remove">
+      <div class="wrap">
+        <div class="sec-head">
+          <span class="sec-ico" aria-hidden="true"><svg class="i"><use href="#i-trash"/></svg></span>
+          <div>
+            <h2 id="h-remove">앱 지우기</h2>
+            <p>언제든 지울 수 있어요.</p>
+          </div>
+        </div>
+
+        <ul class="grid g2">
+          <li class="step card">
+            <div class="art" role="img" aria-label="설정의 앞마당 앱 정보 화면에서 삭제 버튼을 누르는 모습">
+              <div class="ph"><div class="scr">
+                <div class="sb"><b>9:41</b><span class="dots"><i></i><i></i><i></i></span></div>
+                <p class="path"><svg class="i"><use href="#i-chev-l"/></svg>앱 정보</p>
+                <div class="appinfo"><img src="/assets/logo.svg" alt="" width="34" height="34"><b>앞마당</b></div>
+                <div class="acts"><span>열기</span><span class="hl">삭제</span><span>강제 중지</span></div>
+              </div></div>
+            </div>
+            <div class="step-body">
+              <h3>앱 삭제</h3>
+              <p class="step-line">설정 → 앱 → 앞마당 → 삭제를 눌러요.</p>
+            </div>
+          </li>
+          <li class="step card">
+            <div class="art art-server" role="img" aria-label="서버 기록이 시연이 끝난 뒤 지워진다는 그림">
+              <div class="srv">
+                <span class="srv-db"><svg class="i"><use href="#i-db"/></svg></span>
+                <svg class="i srv-arrow"><use href="#i-arrow-r"/></svg>
+                <span class="srv-bin"><svg class="i"><use href="#i-trash"/></svg></span>
+              </div>
+              <p class="srv-cap">시연 끝</p>
+            </div>
+            <div class="step-body">
+              <h3>서버 기록도 지워요</h3>
+              <p class="step-line">예약·신고 기록은 시연이 끝나면 모두 지워요.</p>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="end" aria-labelledby="h-end">
+      <div class="wrap">
+        <div class="end-card">
+          <img src="/assets/logo.svg" alt="" width="56" height="56">
+          <h2 id="h-end">준비됐으면 받으세요</h2>
+          <div class="end-actions">
+            <a class="btn btn-brick" href="/?get=app"><svg class="i"><use href="#i-download"/></svg>앱 받기</a>
+            <a class="btn btn-ghost" href="/"><svg class="i"><use href="#i-home"/></svg>메인으로</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="foot">
+    <div class="wrap">
+      <a href="/">앞마당 받기</a>
+      <a href="/privacy/">개인정보처리방침</a>
+      <a href="https://github.com/dev-riverkim/dev-riverkim.github.io/issues">문의하기</a>
+    </div>
+  </footer>
+  <script src="/config.js"></script>
+  <script src="/assets/install.js"></script>
+</body>
+</html>

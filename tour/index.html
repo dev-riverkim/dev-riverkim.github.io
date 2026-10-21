@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>서비스 소개 — 앞마당</title>
+  <meta name="description" content="앞마당 앱 화면으로 보는 시연 시나리오: 골프 오픈런, 천장 누수 휴장, 오프라인 입장권, AI 도우미.">
+  <meta name="theme-color" content="#F6F2EA">
+  <meta property="og:title" content="앞마당 서비스 소개">
+  <meta property="og:description" content="실제 앱 화면으로 한 장씩 넘겨 보는 시연 투어">
+  <meta property="og:type" content="website">
+  <link rel="icon" href="/assets/logo.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
+  <link rel="stylesheet" href="/assets/site.css">
+  <link rel="stylesheet" href="/assets/tour.css">
+  <script type="module" src="/assets/tour.js"></script>
+</head>
+<body class="tour-body">
+  <a class="skip" href="#tour">본문으로 건너뛰기</a>
+
+  <header class="top t-top">
+    <div class="wrap">
+      <a class="brand" href="/"><img src="/assets/logo.svg" alt="" width="32" height="32">앞마당</a>
+      <a class="top-link" href="/">앱 받기</a>
+    </div>
+  </header>
+
+  <main id="tour" class="tour" aria-labelledby="tour-title">
+    <h1 id="tour-title" class="sr-only">앞마당 서비스 소개</h1>
+
+    <nav class="t-bar" aria-label="장 고르기">
+      <ol class="t-chapters" id="chapters"></ol>
+    </nav>
+
+    <div class="t-track" id="track" role="region" aria-roledescription="슬라이드 모음" aria-label="시연 장면" tabindex="0">
+      <p class="t-loading" id="loading">장면을 불러오는 중…</p>
+    </div>
+
+    <div class="t-ctrl" id="ctrl" hidden>
+      <button type="button" class="t-arrow" id="prev" aria-label="이전 장면">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m15 6-6 6 6 6"/></svg>
+      </button>
+      <div class="t-progress">
+        <ol class="t-dots" id="dots" aria-label="이 장의 장면"></ol>
+        <p class="t-count num" id="count" aria-hidden="true"></p>
+      </div>
+      <button type="button" class="t-arrow" id="next" aria-label="다음 장면">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 6 6 6-6 6"/></svg>
+      </button>
+    </div>
+
+    <p class="sr-only" id="status" aria-live="polite"></p>
+
+    <noscript>
+      <p class="t-noscript">장면을 넘기려면 자바스크립트를 켜 주세요. <a href="/">앱 받기로 돌아가기</a></p>
+    </noscript>
+  </main>
+</body>
+</html>

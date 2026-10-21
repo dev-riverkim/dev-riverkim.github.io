@@ -2,8 +2,8 @@
   "version": "0.1.0",
   "versionCode": 1,
   "apkUrl": "https://github.com/dev-riverkim/dev-riverkim.github.io/releases/latest/download/apmadang.apk",
-  "sizeMB": null,
-  "publishedAt": null,
+  "sizeMB": 136,
+  "publishedAt": "2026-10-21T11:12:00+09:00",
   "notes": [
     "선착순 예약 · 강좌 대기 · 게스트하우스 추첨",
     "인터넷 없이 뜨는 30초 입장권",

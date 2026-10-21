@@ -4,7 +4,7 @@
     "target": {
       "namespace": "android_app",
       "package_name": "com.devriverkim.apmadang",
-      "sha256_cert_fingerprints": ["__SHA256__"]
+      "sha256_cert_fingerprints": ["F4:27:0B:D4:B7:83:EB:80:5E:67:4E:92:EA:E7:68:57:8C:1D:68:C5:70:91:48:F9:C7:88:24:A4:D2:3B:E2:6C"]
     }
   }
 ]

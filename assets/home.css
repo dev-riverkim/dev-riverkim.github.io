@@ -16,15 +16,81 @@ body {
 
 .get { width: 100%; max-width: 420px; margin-top: 28px; padding: 16px; box-shadow: var(--shadow-2); }
 .get-meta { margin-top: 10px; font-size: 13px; line-height: 18px; font-weight: 600; color: var(--ink-soft); text-align: center; }
+.get-size { margin-top: 2px; color: var(--forest); }
 .get-title { font-size: 18px; line-height: 24px; font-weight: 700; }
 .get-line { margin-top: 2px; color: var(--ink-soft); }
 .get-ios { display: flex; align-items: center; gap: 14px; padding: 4px 4px 14px; }
-.get-ios + .btn[hidden] { display: none; }
 .get-badge {
   flex: none; width: 52px; height: 52px; border-radius: 16px;
   display: grid; place-items: center; background: var(--sky-soft); color: var(--sky);
 }
 .get-badge svg { width: 26px; height: 26px; }
+
+/* 아이폰 홈 화면 추가 3단계 — 카드 안에 들어가는 작은 그림 */
+.ios-steps { list-style: none; margin: 0 0 14px; padding: 0; display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; }
+.ios-mini {
+  position: relative; height: 104px; padding: 24px 8px 10px; border-radius: 14px; background: var(--paper);
+  display: flex; flex-direction: column; justify-content: center; gap: 6px; overflow: hidden;
+}
+.ios-cap { margin-top: 8px; text-align: center; font-size: 13px; line-height: 18px; font-weight: 700; }
+.ios-no {
+  position: absolute; top: 6px; left: 6px; width: 20px; height: 20px; border-radius: 50%; display: grid; place-items: center;
+  background: var(--forest); color: #fff; font-size: 11px; font-weight: 800;
+}
+.ios-share { justify-content: flex-end; }
+.ios-url { margin-bottom: auto; margin-left: 22px; height: 14px; border-radius: 7px; background: #fff; box-shadow: var(--shadow-1); }
+.ios-bar {
+  display: flex; align-items: center; justify-content: space-between; height: 30px; padding: 0 6px;
+  border-radius: 10px; background: #fff; box-shadow: var(--shadow-1);
+}
+.ios-bar i { width: 7px; height: 7px; border-radius: 2px; background: var(--ink-faint); }
+.ios-bar b {
+  width: 24px; height: 24px; border-radius: 50%; display: grid; place-items: center; color: var(--sky);
+  box-shadow: 0 0 0 3px rgba(210, 96, 58, 0.45);
+}
+.ios-bar svg { width: 15px; height: 15px; }
+.ios-row { height: 14px; border-radius: 7px; background: #fff; }
+.ios-row.dim { background: var(--line); }
+.ios-row.on {
+  height: auto; min-height: 30px; padding: 6px 8px; border-radius: 9px; display: flex; align-items: center; justify-content: space-between; gap: 4px;
+  font-size: 10px; line-height: 13px; font-weight: 800; color: var(--ink); background: #fff;
+  box-shadow: 0 0 0 3px rgba(210, 96, 58, 0.45);
+}
+.ios-row.on svg { width: 14px; height: 14px; flex: none; }
+@media (max-width: 420px) {
+  .ios-row.on { justify-content: center; white-space: nowrap; font-size: 9.5px; }
+  .ios-row.on svg { display: none; }
+  .ios-cap { font-size: 12.5px; }
+}
+.ios-home { background: var(--sky-soft); align-items: center; gap: 8px; }
+.ios-apps { display: flex; gap: 6px; }
+.ios-apps i { width: 18px; height: 18px; border-radius: 5px; background: rgba(255, 255, 255, 0.8); }
+.ios-icon {
+  display: flex; flex-direction: column; align-items: center; gap: 2px;
+  font-size: 9.5px; line-height: 12px; font-weight: 800; color: var(--forest);
+}
+.ios-icon img { width: 34px; height: 34px; border-radius: 9px; box-shadow: var(--shadow-2); }
+#webapp-btn[aria-disabled='true'] .ic-open, #webapp-btn:not([aria-disabled]) .ic-lock { display: none; }
+
+.get-more {
+  display: inline-flex; align-items: center; gap: 2px; min-height: 44px; margin-top: 4px; padding: 0 4px;
+  font-size: 14px; line-height: 20px; font-weight: 700; color: var(--forest); text-decoration: none;
+}
+.get-more svg { width: 16px; height: 16px; }
+.get-more:hover { text-decoration: underline; text-underline-offset: 3px; }
+.install-more { margin: -8px 16px 14px; }
+
+.get-links { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 16px; margin-top: 18px; }
+.btn-sm { min-height: 48px; padding: 0 18px; font-size: 15px; line-height: 20px; }
+.btn-sm svg { width: 20px; height: 20px; }
+.must-read {
+  display: inline-flex; align-items: center; gap: 6px; min-height: 44px; padding: 0 4px;
+  font-size: 15px; line-height: 20px; font-weight: 700; color: var(--brick-ink);
+  text-decoration: underline; text-decoration-thickness: 2px; text-underline-offset: 4px; text-decoration-color: rgba(168, 74, 40, 0.35);
+}
+.must-read svg { width: 20px; height: 20px; flex: none; }
+.must-read:hover { text-decoration-color: currentColor; }
+
 .get-pc { display: flex; align-items: center; gap: 18px; }
 .get-pc .get-meta { text-align: left; }
 .qr-box {
@@ -116,7 +182,15 @@ body {
 .features { background: var(--forest-soft); padding: 24px 0 64px; }
 .sec-title { margin-top: 6px; font-size: 28px; line-height: 34px; font-weight: 800; letter-spacing: -0.03em; }
 .feat-grid { list-style: none; margin: 28px 0 0; padding: 0; display: grid; gap: 16px; }
-.feat { padding: 16px 16px 22px; }
+.feat { padding: 0; transition: box-shadow 0.2s ease, transform 0.2s ease; }
+.feat:hover { box-shadow: var(--shadow-2); transform: translateY(-2px); }
+.feat-link { display: flex; flex-direction: column; height: 100%; padding: 16px 16px 18px; border-radius: var(--r-card); color: inherit; text-decoration: none; }
+.feat-go {
+  display: inline-flex; align-items: center; gap: 4px; align-self: flex-end; margin-top: auto; padding-top: 14px;
+  font-size: 13px; line-height: 18px; font-weight: 700; color: var(--forest);
+}
+.feat-go svg { width: 16px; height: 16px; transition: transform 0.2s ease; }
+.feat:hover .feat-go svg { transform: translateX(3px); }
 .feat-art {
   position: relative; height: 168px; border-radius: 16px; overflow: hidden;
   display: flex; align-items: center; justify-content: center; gap: 12px;
@@ -230,6 +304,8 @@ body {
 .mini-row .toggle:not(.on) { box-shadow: 0 0 0 3px rgba(210, 96, 58, 0.35); }
 .mini-file { display: flex; justify-content: space-between; align-items: center; padding: 8px 10px; border-radius: 10px; background: var(--paper); }
 .mini-file span { color: var(--forest); font-weight: 800; }
+.mini-file b { display: inline-flex; align-items: center; gap: 6px; }
+.mini-logo { width: 16px; height: 16px; border-radius: 4px; }
 .mini-dialog { align-items: stretch; }
 .mini-warn { font-size: 11px; font-weight: 700; color: var(--brick-ink); }
 .mini-q { font-weight: 700; font-size: 13px; }
@@ -257,13 +333,14 @@ body {
   .hero h1 { margin-top: 28px; font-size: 88px; line-height: 92px; }
   .hero-sub { margin-top: 12px; font-size: 26px; line-height: 34px; }
   .get { margin-top: 40px; padding: 20px; }
+  .ios-mini { height: 116px; }
   .phone { width: 300px; }
   .float-pass { left: calc(50% - 236px); width: 128px; }
   .float-time { right: calc(50% - 232px); top: 96px; font-size: 24px; line-height: 28px; }
   .features { padding: 32px 0 88px; }
   .sec-title { font-size: 36px; line-height: 44px; }
   .feat-grid { gap: 24px; margin-top: 36px; }
-  .feat { padding: 20px 20px 28px; }
+  .feat-link { padding: 20px 20px 22px; }
   .feat-art { height: 220px; }
   .feat-key { font-size: 28px; line-height: 34px; }
   .feat-line { font-size: 16px; line-height: 24px; }
