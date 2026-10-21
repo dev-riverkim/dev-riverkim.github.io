@@ -1,0 +1,13 @@
+{
+  "applinks": {
+    "apps": [],
+    "details": [
+      {
+        "appID": "__TEAMID__.com.devriverkim.apmadang",
+        "appIDs": ["__TEAMID__.com.devriverkim.apmadang"],
+        "paths": ["/e/*"],
+        "components": [{ "/": "/e/*" }]
+      }
+    ]
+  }
+}

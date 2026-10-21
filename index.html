@@ -1,0 +1,286 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>앞마당 — 우리 단지 시설 예약·입장</title>
+  <meta name="description" content="골프·수영장·요가 선착순 예약, 인터넷 없이 뜨는 입장권, 스티커로 고장 신고, AI 도우미. 앞마당 앱 받기.">
+  <meta name="theme-color" content="#F6F2EA">
+  <meta property="og:title" content="앞마당 — 우리 단지 시설 예약·입장">
+  <meta property="og:description" content="선착순 예약 · 오프라인 입장권 · 고장 신고 · AI 도우미">
+  <meta property="og:type" content="website">
+  <link rel="icon" href="/assets/logo.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
+  <link rel="stylesheet" href="/assets/site.css">
+  <link rel="stylesheet" href="/assets/home.css">
+  <script src="/config.js"></script>
+  <script type="module" src="/assets/home.js"></script>
+</head>
+<body>
+  <a class="skip" href="#main">본문으로 건너뛰기</a>
+
+  <header class="top">
+    <div class="wrap">
+      <a class="brand" href="/"><img src="/assets/logo.svg" alt="" width="32" height="32">앞마당</a>
+      <a class="top-link" href="/privacy/">개인정보처리방침</a>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="wrap hero-grid">
+        <div class="hero-copy">
+          <img class="hero-logo" src="/assets/logo.svg" alt="" width="88" height="88">
+          <h1 id="hero-title">앞마당</h1>
+          <p class="hero-sub">우리 단지 시설 예약·입장</p>
+
+          <div class="get card" id="get" aria-live="polite">
+            <!-- 안드로이드 -->
+            <div class="get-pane" data-pane="android">
+              <a class="btn btn-brick btn-block" id="apk-btn" href="#" aria-disabled="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 4v11"/><path d="m7 10 5 5 5-5"/><path d="M5 20h14"/></svg>
+                <span id="apk-label">첫 빌드 준비 중</span>
+              </a>
+              <p class="get-meta num" id="apk-meta">버전 정보를 불러오는 중…</p>
+            </div>
+
+            <!-- 아이폰 -->
+            <div class="get-pane" data-pane="ios" hidden>
+              <div class="get-ios">
+                <span class="get-badge" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="6" y="2.5" width="12" height="19" rx="3"/><path d="M11 18h2"/></svg>
+                </span>
+                <div>
+                  <p class="get-title">아이폰은 준비 중이에요</p>
+                  <p class="get-line" id="ios-line">지금은 안드로이드만 받을 수 있어요.</p>
+                </div>
+              </div>
+              <a class="btn btn-forest btn-block" id="preview-btn" href="#" hidden>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18"/><path d="M12 3a14 14 0 0 1 0 18a14 14 0 0 1 0-18"/></svg>
+                웹으로 미리 보기
+              </a>
+            </div>
+
+            <!-- PC -->
+            <div class="get-pane" data-pane="pc" hidden>
+              <div class="get-pc">
+                <div class="qr-box" id="qr" role="img" aria-label="이 페이지 주소 QR 코드"></div>
+                <div>
+                  <p class="get-title">폰 카메라로 찍으세요</p>
+                  <p class="get-line">이 페이지가 폰에서 열려요.</p>
+                  <p class="get-meta num" id="pc-meta"></p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="other" role="group" aria-label="다른 기기 안내 보기">
+            <button type="button" class="other-chip" data-os="android" aria-pressed="false">안드로이드</button>
+            <button type="button" class="other-chip" data-os="ios" aria-pressed="false">아이폰</button>
+            <button type="button" class="other-chip" data-os="pc" aria-pressed="false">PC</button>
+          </div>
+        </div>
+
+        <div class="hero-art">
+          <div class="phone" role="img" aria-label="앞마당 앱 홈 화면 예시: 다음 예약 골프 오늘 19시, 시설 혼잡도, 안전 정보">
+            <div class="phone-screen" aria-hidden="true">
+              <div class="ph-status num"><span>9:41</span><span class="ph-dots"><i></i><i></i><i></i></span></div>
+              <div class="ph-band">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 9v4"/><path d="M12 17h.01"/><path d="M10.3 3.9 2.4 17.6A2 2 0 0 0 4.1 20.6h15.8a2 2 0 0 0 1.7-3L13.7 3.9a2 2 0 0 0-3.4 0Z"/></svg>
+                긴급 휴장 · 골프 3번 타석
+              </div>
+              <p class="ph-hello">안녕하세요,<br><b>1203호</b></p>
+              <div class="ph-next">
+                <span class="ph-chip">다음 예약</span>
+                <p class="ph-fac">골프연습장</p>
+                <p class="ph-time num">오늘 19:00 <span>· 2번 타석</span></p>
+                <span class="ph-btn">입장권 열기</span>
+              </div>
+              <div class="ph-chips">
+                <span class="ph-pill"><i class="dot warn"></i>피트니스 보통</span>
+                <span class="ph-pill"><i class="dot ok"></i>사우나 여유</span>
+                <span class="ph-pill">골프 남은 12칸</span>
+              </div>
+              <div class="ph-safe">
+                <p>유인 06:00~22:00</p>
+                <div class="ph-calls"><i></i><i></i><i></i></div>
+              </div>
+              <div class="ph-tabs">
+                <span class="on"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 10.5 12 3l9 7.5"/><path d="M5 9.5V21h14V9.5"/></svg></span>
+                <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4.5" width="18" height="16" rx="3"/><path d="M3 9.5h18M8 2.5v4M16 2.5v4"/></svg></span>
+                <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><path d="M14 14h3v3M21 14v7h-7"/></svg></span>
+                <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a4 4 0 0 0-5.4 5.4L3 18l3 3 6.3-6.3a4 4 0 0 0 5.4-5.4l-2.6 2.6-2.4-.6-.6-2.4Z"/></svg></span>
+                <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0 1 16 0"/></svg></span>
+              </div>
+            </div>
+          </div>
+
+          <div class="float-pass" aria-hidden="true">
+            <div class="fp-qr" data-qr="APM1.demo.0.000000"></div>
+            <p class="num">482 913</p>
+            <svg class="fp-ring" viewBox="0 0 36 36"><circle cx="18" cy="18" r="15" fill="none" stroke="rgba(255,255,255,.15)" stroke-width="4"/><circle class="fp-arc" cx="18" cy="18" r="15" fill="none" stroke="#D2603A" stroke-width="4" stroke-linecap="round" pathLength="100" stroke-dasharray="100" stroke-dashoffset="30" transform="rotate(-90 18 18)"/></svg>
+          </div>
+          <div class="float-time num" aria-hidden="true"><span>서버 시각</span>08:59:58</div>
+        </div>
+      </div>
+      <svg class="hero-yard" viewBox="0 0 1440 120" preserveAspectRatio="none" aria-hidden="true"><path d="M0 70 C320 10 760 0 1440 60 V120 H0Z" fill="#E3EEE6"/></svg>
+    </section>
+
+    <section class="features" aria-labelledby="feat-title">
+      <div class="wrap">
+        <p class="eyebrow">한 앱으로</p>
+        <h2 id="feat-title" class="sec-title">예약부터 고장 신고까지</h2>
+
+        <ul class="feat-grid">
+          <li class="feat card">
+            <div class="feat-art art-fcfs" aria-hidden="true">
+              <p class="art-clock num">09:00:00</p>
+              <div class="art-tiles">
+                <i></i><i class="taken"></i><i></i><i></i>
+                <i class="taken"></i><i class="mine"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg></i><i></i><i class="taken"></i>
+              </div>
+            </div>
+            <h3 class="feat-key">선착순 예약</h3>
+            <p class="feat-line">서버 시각으로 정각에, 공정하게.</p>
+          </li>
+
+          <li class="feat card">
+            <div class="feat-art art-pass" aria-hidden="true">
+              <div class="art-passcard">
+                <div class="fp-qr" data-qr="APM1.k3f9.58723311.482913"></div>
+              </div>
+              <span class="art-plane">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17.8 19.2 16 11l3.5-3.5C21 6 21.5 4 21 3c-1-.5-3 0-4.5 1.5L13 8 4.8 6.2c-.5-.1-.9.1-1.1.5l-.3.5c-.2.5-.1 1 .3 1.3L9 12l-2 3H4l-1 1 3 2 2 3 1-1v-3l3-2 3.5 5.3c.3.4.8.5 1.3.3l.5-.2c.4-.3.6-.7.5-1.2Z"/></svg>
+                비행기 모드
+              </span>
+            </div>
+            <h3 class="feat-key">오프라인 입장권</h3>
+            <p class="feat-line">인터넷 없어도 30초마다 새 QR.</p>
+          </li>
+
+          <li class="feat card">
+            <div class="feat-art art-report" aria-hidden="true">
+              <div class="art-sticker">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 8.5a6 6 0 0 1 0 7"/><path d="M9.5 6a10 10 0 0 1 0 12"/><path d="M13 3.5a14 14 0 0 1 0 17"/></svg>
+                <b class="num">G-03</b>
+              </div>
+              <svg class="art-arrow" viewBox="0 0 40 16" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M2 8h34"/><path d="m30 2 6 6-6 6"/></svg>
+              <div class="art-lanes">
+                <span>1</span><span>2</span><span class="closed">3</span><span>4</span>
+              </div>
+            </div>
+            <h3 class="feat-key">고장 신고 → 휴장 조정</h3>
+            <p class="feat-line">스티커 찍어 신고. 겹친 예약은 벌점 없이 취소.</p>
+          </li>
+
+          <li class="feat card">
+            <div class="feat-art art-ai" aria-hidden="true">
+              <p class="art-ask">내일 7시 골프 비어?</p>
+              <div class="art-answer">
+                <p>2번·5번 타석이 비어 있어요</p>
+                <span>예약 확인</span>
+              </div>
+            </div>
+            <h3 class="feat-key">AI 도우미</h3>
+            <p class="feat-line">말로 묻고, 실행은 내가 확인.</p>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="demo" aria-labelledby="demo-title">
+      <div class="wrap demo-grid">
+        <div class="demo-code card">
+          <p class="eyebrow">시연용</p>
+          <h2 id="demo-title" class="demo-title">세대 인증번호</h2>
+          <div class="code-row">
+            <p class="code num" aria-label="2 0 2 6 1 0"><span>2</span><span>0</span><span>2</span><span>6</span><span>1</span><span>0</span></p>
+            <button type="button" class="copy-btn" id="copy-code" data-code="202610">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="12" height="12" rx="2.5"/><path d="M5 15H4a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h10a1 1 0 0 1 1 1v1"/></svg>
+              <span>복사</span>
+            </button>
+          </div>
+          <p class="demo-line">가입할 때 동·호수와 함께 넣으세요.</p>
+        </div>
+
+        <div class="demo-notes card">
+          <p class="eyebrow">이번 버전</p>
+          <p class="notes-ver num" id="notes-ver">v—</p>
+          <ul class="notes" id="notes"></ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="install" aria-labelledby="install-title">
+      <div class="wrap">
+        <details class="install-box card" id="install">
+          <summary>
+            <span class="sum-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3 4 6v6c0 4.5 3.4 8.3 8 9 4.6-.7 8-4.5 8-9V6Z"/><path d="m9 12 2 2 4-4"/></svg>
+            </span>
+            <span class="sum-text">
+              <span id="install-title" class="sum-title">설치가 막히면</span>
+              <span class="sum-sub">갤럭시 자동 차단 · Play 프로텍트</span>
+            </span>
+            <svg class="sum-chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>
+          </summary>
+
+          <ol class="steps">
+            <li class="step">
+              <div class="mini" aria-hidden="true">
+                <p class="mini-path">설정 › 보안 및 개인정보 보호</p>
+                <div class="mini-row">
+                  <span>자동 차단</span>
+                  <i class="toggle"></i>
+                </div>
+                <div class="mini-row dim"><span>앱 보안</span></div>
+              </div>
+              <p class="step-no">1</p>
+              <h3 class="step-title">자동 차단 끄기</h3>
+              <p class="step-line">설치하는 동안만 잠시 꺼 두세요.</p>
+            </li>
+            <li class="step">
+              <div class="mini" aria-hidden="true">
+                <p class="mini-path">출처를 알 수 없는 앱</p>
+                <div class="mini-row">
+                  <span>이 출처 허용</span>
+                  <i class="toggle on"></i>
+                </div>
+                <div class="mini-file"><b>apmadang.apk</b><span>열기</span></div>
+              </div>
+              <p class="step-no">2</p>
+              <h3 class="step-title">이 출처 허용</h3>
+              <p class="step-line">받은 파일을 열고, 브라우저에 설치를 허용해요.</p>
+            </li>
+            <li class="step">
+              <div class="mini mini-dialog" aria-hidden="true">
+                <p class="mini-warn">Play 프로텍트</p>
+                <p class="mini-q">확인되지 않은 앱이에요</p>
+                <span class="mini-link">세부정보 더보기</span>
+                <span class="mini-cta">무시하고 설치</span>
+              </div>
+              <p class="step-no">3</p>
+              <h3 class="step-title">무시하고 설치</h3>
+              <p class="step-line">경고가 뜨면 ‘세부정보 더보기’를 눌러요.</p>
+            </li>
+          </ol>
+          <p class="install-after">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3 4 6v6c0 4.5 3.4 8.3 8 9 4.6-.7 8-4.5 8-9V6Z"/></svg>
+            설치가 끝나면 자동 차단을 다시 켜 두세요.
+          </p>
+        </details>
+      </div>
+    </section>
+  </main>
+
+  <footer class="foot">
+    <div class="wrap">
+      <a href="/privacy/">개인정보처리방침</a>
+      <a id="issues-link" href="https://github.com/dev-riverkim/dev-riverkim.github.io/issues">문의하기</a>
+      <span class="spacer"></span>
+      <small>프로토타입 · QR 생성 <a href="/vendor/toqr.LICENSE.md">toqr (MIT)</a> · 글꼴 Pretendard (OFL)</small>
+    </div>
+  </footer>
+</body>
+</html>

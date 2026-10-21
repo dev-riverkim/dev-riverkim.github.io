@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="앞마당">
+  <defs><clipPath id="apm-r"><rect width="64" height="64" rx="18"/></clipPath></defs>
+  <g clip-path="url(#apm-r)">
+    <rect width="64" height="64" fill="#1F4D36"/>
+    <circle cx="46" cy="18" r="7" fill="#F1B93B"/>
+    <rect x="13" y="17" width="13" height="29" rx="2.5" fill="#F6F2EA"/>
+    <rect x="29" y="26" width="11" height="20" rx="2.5" fill="#E3EEE6"/>
+    <g fill="#1F4D36">
+      <rect x="16" y="21" width="3" height="3" rx=".8"/><rect x="20.5" y="21" width="3" height="3" rx=".8"/>
+      <rect x="16" y="27" width="3" height="3" rx=".8"/><rect x="20.5" y="27" width="3" height="3" rx=".8"/>
+      <rect x="16" y="33" width="3" height="3" rx=".8"/><rect x="20.5" y="33" width="3" height="3" rx=".8"/>
+      <rect x="31.5" y="30" width="2.5" height="3" rx=".8"/><rect x="35.5" y="30" width="2.5" height="3" rx=".8"/>
+    </g>
+    <path d="M0 46 C16 39 36 38 64 44 V64 H0Z" fill="#2E8B57"/>
+    <path d="M24 64 C27 56 35 50 45 46.5 L49.5 47.5 C41 51.5 35.5 57 33 64Z" fill="#F6F2EA" opacity=".85"/>
+  </g>
+</svg>

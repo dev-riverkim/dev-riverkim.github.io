@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>개인정보처리방침 · 앞마당</title>
+  <meta name="description" content="앞마당 프로토타입 개인정보처리방침">
+  <meta name="theme-color" content="#F6F2EA">
+  <link rel="icon" href="/assets/logo.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
+  <link rel="stylesheet" href="/assets/site.css">
+  <link rel="stylesheet" href="/assets/page.css">
+</head>
+<body>
+  <a class="skip" href="#main">본문으로 건너뛰기</a>
+  <header class="top">
+    <div class="wrap">
+      <a class="brand" href="/"><img src="/assets/logo.svg" alt="" width="32" height="32">앞마당</a>
+      <a class="top-link" href="/">앱 받기</a>
+    </div>
+  </header>
+
+  <main id="main" class="doc">
+    <div class="wrap">
+      <div class="doc-head">
+        <p class="eyebrow">2026년 10월 21일 시행 · 프로토타입</p>
+        <h1>개인정보처리방침</h1>
+        <p>앞마당은 시연용 프로토타입이에요. 필요한 것만 받고, 실명과 전화번호는 받지 않아요.</p>
+      </div>
+
+      <ul class="doc-summary">
+        <li class="card">
+          <span class="ico forest" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0 1 16 0"/><path d="M3 3l18 18"/></svg></span>
+          <span><b>실명·전화번호 없음</b><span class="sub">닉네임과 동·호수만</span></span>
+        </li>
+        <li class="card">
+          <span class="ico sky" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v3M12 18v3M3 12h3M18 12h3"/><circle cx="12" cy="12" r="5"/></svg></span>
+          <span><b>AI 대화는 저장 안 함</b><span class="sub">답을 만들 때만 Gemini로 전송</span></span>
+        </li>
+        <li class="card">
+          <span class="ico sun" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="10" rx="2.5"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg></span>
+          <span><b>서울 리전에 보관</b><span class="sub">Supabase · 접근 규칙으로 보호</span></span>
+        </li>
+      </ul>
+
+      <section class="doc-sec card" aria-labelledby="s1">
+        <h2 id="s1"><span class="n" aria-hidden="true">1</span>받는 정보</h2>
+        <table class="items">
+          <thead><tr><th scope="col">항목</th><th scope="col">쓰는 곳</th></tr></thead>
+          <tbody>
+            <tr><td>닉네임, 동·호수</td><td>세대 확인, 예약·입장 표시</td></tr>
+            <tr><td>예약·입장 기록</td><td>선착순·대기·추첨, 노쇼·이용료 계산</td></tr>
+            <tr><td>신고 내용·사진</td><td>고장 접수와 처리. 사진의 위치 정보는 올리기 전에 지워요. 촬영 금지 구역은 사진을 받지 않아요</td></tr>
+            <tr><td>푸시 알림 토큰</td><td>예약·휴장·처리 완료 알림</td></tr>
+            <tr><td>익명 로그인 ID</td><td>기기와 세대 연결</td></tr>
+          </tbody>
+        </table>
+        <p class="muted">실명, 전화번호, 생년월일, 위치(GPS), 연락처는 받지 않아요.</p>
+      </section>
+
+      <section class="doc-sec card" aria-labelledby="s2">
+        <h2 id="s2"><span class="n" aria-hidden="true">2</span>AI 도우미</h2>
+        <ul>
+          <li>도우미에 입력한 글은 답을 만들기 위해 Google Gemini API로 보내요.</li>
+          <li>대화 내용은 앞마당 서버에 저장하지 않아요. 앱을 닫으면 사라져요.</li>
+          <li>Google 쪽 처리는 <a href="https://ai.google.dev/gemini-api/terms">Gemini API 약관</a>을 따라요. 이름·전화번호 같은 개인정보는 입력하지 마세요.</li>
+        </ul>
+      </section>
+
+      <section class="doc-sec card" aria-labelledby="s3">
+        <h2 id="s3"><span class="n" aria-hidden="true">3</span>보관과 맡기는 곳</h2>
+        <ul>
+          <li><b>Supabase</b> (서울 리전): 위 정보를 보관해요. 세대별 접근 규칙으로 다른 세대는 볼 수 없어요.</li>
+          <li><b>Google Gemini</b>: AI 도우미 답 생성 (저장 안 함).</li>
+          <li><b>Expo 푸시 서비스</b>: 알림 전달.</li>
+          <li><b>GitHub Pages</b>: 이 웹페이지와 설치 파일 배포.</li>
+        </ul>
+        <p>시연이 끝나면 모든 데이터를 지워요. 그 전에 지우고 싶으면 아래로 요청해 주세요.</p>
+      </section>
+
+      <section class="doc-sec card" aria-labelledby="s4">
+        <h2 id="s4"><span class="n" aria-hidden="true">4</span>문의·삭제 요청</h2>
+        <p>
+          <a href="https://github.com/dev-riverkim/dev-riverkim.github.io/issues">GitHub 이슈로 문의하기</a>
+        </p>
+        <p class="muted">이슈는 누구나 볼 수 있어요. 동·호수나 닉네임은 적지 말고 “삭제 요청”이라고만 남겨 주세요. 이슈 댓글로 방법을 안내해 드려요.</p>
+      </section>
+
+      <p class="notice" role="note">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 8v5"/><path d="M12 16h.01"/></svg>
+        이 문서는 프로토타입 시연용 안내이며 법률 자문이 아닙니다. 실제 서비스로 운영할 때는 개인정보 보호법에 맞춰 전문가 검토를 받아 다시 작성해야 합니다.
+      </p>
+    </div>
+  </main>
+
+  <footer class="foot">
+    <div class="wrap">
+      <a href="/">앞마당 받기</a>
+      <a href="https://github.com/dev-riverkim/dev-riverkim.github.io/issues">문의하기</a>
+    </div>
+  </footer>
+</body>
+</html>

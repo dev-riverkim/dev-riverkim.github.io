@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>앞마당</title>
+  <meta name="theme-color" content="#F6F2EA">
+  <meta name="robots" content="noindex">
+  <!-- /e/{code} 같은 깊은 경로에서도 열리므로 모든 주소는 / 로 시작한다 -->
+  <link rel="icon" href="/assets/logo.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
+  <link rel="stylesheet" href="/assets/site.css">
+  <link rel="stylesheet" href="/assets/page.css">
+  <script src="/config.js"></script>
+  <script src="/assets/notfound.js" defer></script>
+</head>
+<body>
+  <header class="top">
+    <div class="wrap">
+      <a class="brand" href="/"><img src="/assets/logo.svg" alt="" width="32" height="32">앞마당</a>
+    </div>
+  </header>
+
+  <main id="main" class="solo">
+    <div class="wrap">
+      <!-- 설비 스티커 -->
+      <section class="solo-card card" id="sticker" hidden aria-labelledby="eq-title">
+        <div class="solo-art art-brick" aria-hidden="true">
+          <svg viewBox="0 0 440 132" preserveAspectRatio="xMidYMid meet">
+            <circle cx="380" cy="30" r="46" fill="#FDF1D3"/>
+            <g transform="translate(70 34)">
+              <rect x="0" y="0" width="64" height="64" rx="16" fill="#fff"/>
+              <path d="M22 24a12 12 0 0 1 0 16M29 19a19 19 0 0 1 0 26M36 14a26 26 0 0 1 0 36" fill="none" stroke="#1F4D36" stroke-width="3.2" stroke-linecap="round"/>
+            </g>
+            <path d="M150 66h46" stroke="#A84A28" stroke-width="3.2" stroke-linecap="round"/>
+            <path d="m188 58 8 8-8 8" fill="none" stroke="#A84A28" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/>
+            <g transform="translate(214 30)">
+              <rect width="150" height="72" rx="18" fill="#fff"/>
+              <rect x="16" y="16" width="40" height="40" rx="12" fill="#D2603A"/>
+              <path d="M41 26.5a8 8 0 0 0-10.8 10.8L21 46.5l4.5 4.5 9.2-9.2a8 8 0 0 0 10.8-10.8l-4.6 4.6-3.6-.9-.9-3.6Z" fill="#fff" transform="translate(-0.5 -2)"/>
+              <rect x="68" y="22" width="64" height="10" rx="5" fill="#18291F"/>
+              <rect x="68" y="40" width="44" height="10" rx="5" fill="#E7E1D6"/>
+            </g>
+          </svg>
+        </div>
+        <div class="solo-tag">
+          <p class="eyebrow">설비 스티커</p>
+          <span class="code-chip num" id="eq-code"></span>
+        </div>
+        <h1 id="eq-title"><span class="skeleton" aria-hidden="true"></span><span class="sr-only">설비 확인 중</span></h1>
+        <p class="solo-line">앱에서 열면 이 설비가 채워진 채로 신고가 시작돼요.</p>
+        <div class="solo-actions">
+          <a class="btn btn-brick btn-block" id="open-app" href="apmadang://report/new">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 4h6v6"/><path d="M20 4 11 13"/><path d="M18 14v4a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4"/></svg>
+            앱에서 열기
+          </a>
+          <a class="btn btn-ghost btn-block" href="/">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 4v11"/><path d="m7 10 5 5 5-5"/><path d="M5 20h14"/></svg>
+            앱 설치
+          </a>
+        </div>
+        <p class="solo-status" id="eq-status" role="status" hidden>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 8v5"/><path d="M12 16h.01"/></svg>
+          <span id="eq-status-text"></span>
+        </p>
+      </section>
+
+      <!-- 그 밖의 없는 주소 -->
+      <section class="solo-card card" id="lost" hidden aria-labelledby="lost-title">
+        <div class="solo-art" aria-hidden="true">
+          <svg viewBox="0 0 440 132" preserveAspectRatio="xMidYMid slice">
+            <rect width="440" height="132" fill="#E3EEE6"/>
+            <circle cx="350" cy="36" r="20" fill="#F1B93B"/>
+            <rect x="70" y="30" width="44" height="74" rx="6" fill="#F6F2EA"/>
+            <rect x="120" y="52" width="34" height="52" rx="6" fill="#fff"/>
+            <g fill="#1F4D36" opacity=".85">
+              <rect x="80" y="40" width="8" height="8" rx="2"/><rect x="96" y="40" width="8" height="8" rx="2"/>
+              <rect x="80" y="56" width="8" height="8" rx="2"/><rect x="96" y="56" width="8" height="8" rx="2"/>
+              <rect x="128" y="62" width="7" height="7" rx="2"/><rect x="139" y="62" width="7" height="7" rx="2"/>
+            </g>
+            <path d="M0 100 C120 82 300 80 440 96 V132 H0Z" fill="#2E8B57"/>
+            <path d="M190 132 C200 116 240 104 300 98" fill="none" stroke="#F6F2EA" stroke-width="10" stroke-linecap="round" stroke-dasharray="2 18"/>
+            <g transform="translate(300 74)">
+              <rect x="0" y="0" width="56" height="8" rx="4" fill="#A84A28"/>
+              <rect x="4" y="8" width="5" height="16" rx="2" fill="#A84A28"/>
+              <rect x="47" y="8" width="5" height="16" rx="2" fill="#A84A28"/>
+            </g>
+          </svg>
+        </div>
+        <p class="eyebrow num">404</p>
+        <h1 id="lost-title">길을 잃었어요</h1>
+        <p class="solo-line">주소가 바뀌었거나 없는 페이지예요.</p>
+        <div class="solo-actions">
+          <a class="btn btn-forest btn-block" href="/">첫 화면으로</a>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <footer class="foot">
+    <div class="wrap">
+      <a href="/privacy/">개인정보처리방침</a>
+      <a id="issues-link" href="https://github.com/dev-riverkim/dev-riverkim.github.io/issues">문의하기</a>
+    </div>
+  </footer>
+</body>
+</html>
